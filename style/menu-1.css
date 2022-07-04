@@ -1,0 +1,52 @@
+@charset "UTF-8";
+.category {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: fit-content;
+  flex-wrap: wrap;
+  gap: 50px;
+  gap-min-width: 180px;
+}
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 20%;
+  border-radius: 25px;
+  padding: 5px 15px;
+  box-shadow: 0px 5px 10px;
+  width: 25%;
+  min-width: 470px;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+.menu-title {
+  font-family: "Shrikhand", cursive;
+  margin: 10%;
+}
+
+.price {
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  height: 45%;
+}
+
+.entrée {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  align-self: flex-start;
+  margin-left: 10%;
+}
+
+/*# sourceMappingURL=menu-1.css.map */

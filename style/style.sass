@@ -4,15 +4,20 @@ $third_color: #99E2D0
 $heart-size: 25px
 $heart-border: 2px
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap')
-
-*
-    border: solid 1px
+ 
     
 body
     min-height: 100vh
     width: 100%
     margin: 0
     font-family: 'Roboto', sans-serif
+    animation: 1 ease-in 1s loading
+
+@keyframes loading
+    0%
+        color: white
+    100%
+        color: black
 
 #logo 
     font-family: "Shrikhand", cursive
@@ -43,7 +48,9 @@ h1, h2, h3, h4, h5, h6
     font-size: 24px
     gap:20px
     height: 100px
-    background: #adadad
+    background: #dbdbdb
+    color: #525252
+    font-weight: 900
 #top
     display: flex
     flex-direction: column
@@ -52,14 +59,15 @@ h1, h2, h3, h4, h5, h6
     font-size: 32px
     height: 80vh
     gap:20px  
-    background: #d8d8d8
+    background: #f2f2f2
     // padding: 0 50px 0 50px 
     text-align: center
     h1
-        font-size: 64px
         font-weight: 900
         width: 100
         text-align: center
+    sub
+        color: #acacac
 .top-btn
     border: none
     height: 100px
@@ -76,8 +84,7 @@ h1, h2, h3, h4, h5, h6
     font-weight: 700
 /*------------------*/
 
-#fonctionnement
-    height: 100vh
+#fonctionnement 
     display: flex
     flex-direction: column
     justify-content: center
@@ -96,28 +103,47 @@ h1, h2, h3, h4, h5, h6
     gap:100px
     margin-top: 100px
 .step
-    height: 100px
-    background: #d8d8d8
+    height: 125px
+    background: #f2f2f2
     border-radius: 50px
     width: 25%
     min-width: 470px
     display: flex
     justify-content: center
     align-items: center
-    font-size: 24px
-.number-container
-    gap:0px
-    
-.number
-    background: violet
-    height: 50px
-    width: 50px
-    border-radius:50%
+    box-shadow: 5px 10px 20px 1px
+    transition: background 1s ease-in-out 100ms
+    white-space: nowrap
+    &:hover
+        background: #d6baf8f6
+        .icon-d
+            color: $primary-color
+.number-wrap:hover
+    .step
+        background: #d6baf8f6
+        .icon-d
+            color: $primary-color
+.number-wrap
+    height: 125px
+    border-radius: 50px
+    width: 25%
+    min-width: 470px
     display: flex
     justify-content: center
     align-items: center
     position: relative
-   
+    top:  -140%
+    
+.number
+    position: relative
+    background: $primary-color
+    left: -235px
+    height: 50px
+    width: 50px
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
 /*------------------*/
 
 #restaurant
@@ -193,7 +219,6 @@ h1, h2, h3, h4, h5, h6
 
 
     
-
 footer
     background: #282828
     color: white
@@ -202,7 +227,9 @@ footer
         font-family: "Shrikhand", cursive
     ul
         list-style: none
+        margin: 0
         li
+            height: 30px
             a
                 text-decoration: none
                 color: white
@@ -211,6 +238,26 @@ footer
 
 .fa-heart
     font-size: 40px
+.fa-solid 
+    color: $secondary-color
+    position: relative
+    left: -41px
+    opacity: 0
+    transition: opacity 1s ease-in-out 100ms
+    &:hover
+        opacity: 1
+.fa-regular
+    opacity: 1
+    transition: opacity 1s ease-in-out 100ms
+    &:hover
+        opacity: 0 
+
+.icon-d
+    margin-left: 20px
+    color: #9c9c9c 
+    opacity: 1
+    transition: color 1s ease-in-out 100ms
+
 
 /*-------------------menu--------------------*/ 
 
@@ -221,6 +268,40 @@ footer
     position: relative
     top: 0px
     &-1
-        background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg")
-        background-repeat: no-repeat
-        background-size: cover
+        background-color: #000000000
+@media all and (max-width: 1030px)
+    .number-container
+        position: relative
+        bottom: 675px
+        z-index: 3
+    .number-wrap
+        z-index: 2
+        width: 80%
+    .number
+       left: -40vw
+    .step
+        z-index: 1
+        width: 80%
+@media all and (max-width: 768px) 
+    body
+        width: 100vw
+    #top
+        sub
+            font-weight: 100
+        .title
+            font-size: 8vw
+            width: 75%
+    .step 
+        min-width: unset
+        font-size: 4vw
+    .number-wrap
+        min-width: unset
+    .card-container
+        width: 100%
+    .card
+        min-width: unset
+        min-height: 265px
+        width: 100%
+        font-size: 2vw
+        &-img
+            height: 80%

@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/style.css">
     <script src="https://kit.fontawesome.com/93612cedef.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
@@ -26,22 +26,22 @@
             <button class="top-btn" href="#">Explorez nos restaurants</button>
         </section>
         <section id="fonctionnement">
-            <h1>fonctionnement</h1>
+            <h1>Fonctionnement</h1>
             <div class="step-container">
-                <div class="number">1</div>
-                <div class="number">2</div>
-                <div class="number">3</div>
                 <div class="step">
-                    <div class="text">Choisissez un restaurant</div>
+                    <div class="text"><i class="fa-solid fa-mobile-screen-button icon-d"></i> Choisissez un restaurant</div>
                 </div>
                 <div class="step">
-                    <div class="text">Composez votre menu</div>
+                    <div class="text"></i><i class="fa-solid fa-bars icon-d"></i> Composez votre menu</div>
                 </div>
                 <div class="step">
                     <div class="text">Dégustez au restaurant</div>
                 </div>
             </div>
             <div class="number-container">
+                <div class="number-wrap"><div class="number">1</div></div>
+                <div class="number-wrap"><div class="number">2</div></div>
+                <div class="number-wrap"><div class="number">3</div></div>
             </div>
         </section>
         <section id="restaurant">
@@ -54,7 +54,7 @@
                             <div class="title">La palette du goût</div> 
                             <sub>Ménilmontant</sub>
                         </div>
-                        <div class="card-action"><i class="fa-regular fa-heart"></i></div>
+                        <div class="card-action"><i class="fa-regular fa-heart"></i><i class="fa-solid fa-heart"></i></div>
                     </div>
                 </div>
                 <div class="card">
@@ -64,9 +64,19 @@
                             <div class="title">La palette du goût</div> 
                             <sub>Ménilmontant</sub>
                         </div>
-                        <div class="card-action"><i class="fa-regular fa-heart"></i></div>
+                        <div class="card-action"><i class="fa-regular fa-heart"></i><i class="fa-solid fa-heart"></i></div>
                     </div>
                 </div>
+                <a class="card">
+                    <div class="card-img"></div>
+                    <div class="card-content">
+                        <div class="card-text">
+                            <div class="title">A la Francaise</div> 
+                            <sub>Cité rouge</sub>
+                        </div>
+                        <div class="card-action"><i class="fa-regular fa-heart"></i><i class="fa-solid fa-heart"></i></div>
+                    </div>
+                </a>
                 <div class="card">
                     <div class="card-img"></div>
                     <div class="card-content">
@@ -74,27 +84,18 @@
                             <div class="title">La palette du goût</div> 
                             <sub>Ménilmontant</sub>
                         </div>
-                        <div class="card-action"><i class="fa-regular fa-heart"></i></div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-img"></div>
-                    <div class="card-content">
-                        <div class="card-text">
-                            <div class="title">La palette du goût</div> 
-                            <sub>Ménilmontant</sub>
-                        </div>
-                        <div class="card-action"><i class="fa-regular fa-heart"></i></div>
+                        <div class="card-action"><i class="fa-regular fa-heart"></i><i class="fa-solid fa-heart"></i></div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+    <div class="loader">
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+    </div>
     <footer>
-        <div class="title">
-            ohmyfood
-        </div>
         <ul>
+            <li class="title">ohmyfood</li>
             <li><a href="#">Proposer un restaurant</a></li>
             <li><a href="#">Devenir partenaire</a></li>
             <li><a href="#">Mentions légales</a></li>

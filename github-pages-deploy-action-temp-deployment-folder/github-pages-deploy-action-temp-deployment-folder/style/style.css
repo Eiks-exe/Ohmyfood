@@ -1,23 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+* {
+  border: solid 1px;
+}
+
 body {
   min-height: 100vh;
   width: 100%;
   margin: 0;
   font-family: "Roboto", sans-serif;
-  
 }
 
 #logo {
   font-family: "Shrikhand", cursive;
-  font-size: 46px;
+  font-size: 64px;
 }
-.main-logo{
-  margin: auto;
-}
+
 nav {
   height: 125px;
   box-shadow: 1px 1px 20px;
   display: flex;
+  justify-content: space-around;
   align-items: center;
   width: 100%;
   z-index: 20;
@@ -32,17 +34,6 @@ main {
   height: 100%;
   font-weight: 900;
 }
-main, header, footer {
-  animation: 1 ease-in 2s loading;
-}
-@keyframes loading {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity:1;
-  }
-}
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: bolder;
@@ -55,9 +46,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 24px;
   gap: 20px;
   height: 100px;
-  background: #dbdbdb;
-  color: #525252;
-  font-weight: 900;
+  background: #adadad;
 }
 
 #top {
@@ -68,16 +57,14 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 32px;
   height: 80vh;
   gap: 20px;
-  background: #f2f2f2;
+  background: #d8d8d8;
   text-align: center;
 }
 #top h1 {
+  font-size: 64px;
   font-weight: 900;
   width: 100;
   text-align: center;
-}
-#top sub {
-  color: #acacac;
 }
 
 .top-btn {
@@ -94,16 +81,11 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   font-size: 24px;
   font-weight: 700;
-  transition: background 1s ease-in 100ms;
-  
-}
-.top-btn:hover{
-  background: #9356DC;
-
 }
 
 /*------------------*/
 #fonctionnement {
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -123,62 +105,33 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 100px;
   margin-top: 100px;
-  z-index: 1;
 }
 
 .step {
-  height: 125px;
-  background: #f2f2f2;
+  height: 100px;
+  background: #d8d8d8;
   border-radius: 50px;
   width: 25%;
   min-width: 470px;
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 5px 10px 20px 1px;
-  transition: background 1s ease-in-out 100ms;
-  white-space: nowrap;
-  z-index: 20;
-}
-.step:hover {
-  background: rgba(214, 186, 248, 0.9647058824);
-}
-.step:hover .icon-d {
-  color: #9356DC;
+  font-size: 24px;
 }
 
-.number-wrap:hover .step {
-  background: rgba(214, 186, 248, 0.9647058824);
-}
-.number-wrap:hover .step .icon-d {
-  color: #9356DC;
-}
-
-.number-wrap {
-  height: 125px;
-  border-radius: 50px;
-  width: 25%;
-  min-width: 470px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  top: -140%;
-  z-index: 40;
-  pointer-events: none;
+.number-container {
+  gap: 0px;
 }
 
 .number {
-  position: relative;
-  background: #9356DC;
-  left: -235px;
+  background: violet;
   height: 50px;
   width: 50px;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 20;
+  position: relative;
 }
 
 /*------------------*/
@@ -279,10 +232,6 @@ footer .title {
 }
 footer ul {
   list-style: none;
-  margin: 0;
-}
-footer ul li {
-  height: 30px;
 }
 footer ul li a {
   text-decoration: none;
@@ -296,32 +245,6 @@ footer ul li a:visited {
   font-size: 40px;
 }
 
-.fa-solid {
-  color: #9356DC ;
-  position: relative;
-  left: -41px;
-  opacity: 0;
-  transition: opacity 1s ease-in-out 100ms;
-}
-.fa-solid:hover {
-  opacity: 1;
-}
-
-.fa-regular {
-  opacity: 1;
-  transition: opacity 1s ease-in-out 100ms;
-}
-.fa-regular:hover {
-  opacity: 0;
-}
-
-.icon-d {
-  margin-left: 20px;
-  color: #9c9c9c;
-  opacity: 1;
-  transition: color 1s ease-in-out 100ms;
-}
-
 /*-------------------menu--------------------*/ 
 .img-menu {
   height: 300px;
@@ -331,165 +254,9 @@ footer ul li a:visited {
   top: 0px;
 }
 .img-menu-1 {
-  background-color: rgba(0, 0, 0, 0) 0;
+  background-image: url("../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
-@media all and (max-width: 1030px) {
-  .number-container {
-    position: relative;
-    bottom: 675px;
-    z-index: 3;
-  }
-
-  .number-wrap {
-    z-index: 2;
-    width: 80%;
-  }
-
-  .number {
-    left: -40vw;
-  }
-
-  .step {
-    z-index: 1;
-    width: 80%;
-  }
-}
-@media all and (max-width: 768px) {
-  body {
-    width: 100vw;
-  }
-
-  #top sub {
-    font-weight: 100;
-  }
-  #top .title {
-    font-size: 8vw;
-    width: 75%;
-  }
-
-  .step {
-    min-width: unset;
-    font-size: 4vw;
-  }
-
-  .number-wrap {
-    min-width: unset;
-  }
-
-  .card-container {
-    width: 100%;
-  }
-
-  .card {
-    min-width: unset;
-    min-height: 265px;
-    width: 100%;
-    font-size: 2vw;
-    font-style: none;
-    color: black;
-  }
-  .card:visited {
-    color: black;
-  }
-
-  .card-img {
-    height: 80%;
-  }
-}
-#fonctionnement {
-  height: 150vh;
-}
-
-#fonctionnement > h1 {
-  margin: 0;
-  position: relative;
-  top: 250px;
-  left: 40px;
-  font-size: 32px;
-}
-.step-container{
-  position: relative;
-  top: 200px
-}
-.number-container {
-  position: relative;
-  top: 330px;
-}
-.lds-ring {
-  display: inline-block;
-  position: absolute;
-  top: 400px;
-  left: 40%;
-  width: 80px;
-  height: 80px;
-  opacity: 0;
-  animation: ease-in-out 1s vanish 1;
-}
-.lds-ring div {
-  box-sizing: border-box;
-  display: block;
-  position: absolute;
-  width: 64px;
-  height: 64px;
-  margin: 8px;
-  border: 8px solid #fff;
-  border-radius: 50%;
-  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  border-color: rgb(94, 94, 94) transparent transparent transparent;
-}
-.lds-ring div:nth-child(1) {
-  animation-delay: -0.45s;
-}
-.lds-ring div:nth-child(2) {
-  animation-delay: -0.3s;
-}
-.lds-ring div:nth-child(3) {
-  animation-delay: -0.15s;
-}
-@keyframes lds-ring {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-@keyframes vanish{
-  0% {
-    opacity:0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100%{
-    opacity: 0;
-  }
-}
-
-btn-container{
-  background: white
-}
-
-.icon-d{
-  padding-left: 50px;
-}
-
-.new{
-  font-size: 16px;
-  width: 20%;
-  padding: 5px;
-  background: #99E2D0 ;
-  color: #007558;
-  border-radius: 3px;
-  text-align: center;
-  position: absolute;
-  left: 68%;
-  margin-top: 15px;
-  box-shadow: 1px 1px 20px black;
-}
-sub{
-  font-size: 16px;
-  font-weight: 100;
-}
 /*# sourceMappingURL=style.css.map */
